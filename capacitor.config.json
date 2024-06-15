@@ -1,0 +1,8 @@
+{
+  "appId": "com.vinicius.appprojeto",
+  "appName": "appprojeto",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
