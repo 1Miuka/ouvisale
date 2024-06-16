@@ -23,11 +23,6 @@ const routes = [
     component: () => import('../views/RegistroView.vue')
   },
   {
-    path: '/mongo',
-    name: 'mongo',
-    component: () => import('../views/TesteMongo.vue')
-  },
-  {
     path: '/manifestacao',
     name: 'manifestacao',
     component: () => import('../views/ManifestacaoView.vue')
