@@ -26,6 +26,7 @@
                             <th scope="col">Usuário</th>
                             <th scope="col">Setor</th>
                             <th scope="col">Destinatário</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Data</th>
                         </tr>
                     </thead>
@@ -39,6 +40,7 @@
                             <td>{{ item.Usuario }}</td>
                             <td>{{ item.Setor }}</td>
                             <td>{{ item.Destinatário }}</td>
+                            <td>{{ item.Status }}</td>
                             <td>{{ item.Data }}</td>
                         </tr>
                     </tbody>

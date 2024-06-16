@@ -1,52 +1,45 @@
-<template class="body2">
+<template>
     <section class="body2">
-        <div class="container">
-            <br><br><br><br><br>
-            <div>
-                <FormRegistroUsuario />
-            </div>
-            <br><br><br><br><br><br>
+      <div class="container">
+        <div>
+          <FormRegistroUsuario />
         </div>
+      </div>
     </section>
-</template>
-
-<script>
-
-
-import FormRegistroUsuario from "../components/FormRegistroUsuario.vue"
-import { logar } from '@/components/FunctionMongo';
-
-export default {
-
+  </template>
+  
+  <script>
+  import FormRegistroUsuario from "../components/FormRegistroUsuario.vue";
+  import { logar } from "@/components/FunctionMongo";
+  
+  export default {
     components: {
-        FormRegistroUsuario
+      FormRegistroUsuario,
     },
-
-    data() {
-        return {
-            UnisalesLogo: require("../assets/logo.svg"),
-        }
-    },
-
+  
     mounted() {
-        this.fazerLogin();
+      this.fazerLogin();
     },
-
+  
     methods: {
-        async fazerLogin() {
-            const username = 'viniciugsouto@gmail.com'
-            const password = '1sX1d5sTFhpSvJyJ'
-            logar(username, password);
-        },
-    }
-}
-
-</script>
-
-<style scoped>
-.body2 {
+      async fazerLogin() {
+        const username = "viniciugsouto@gmail.com";
+        const password = "1sX1d5sTFhpSvJyJ";
+        logar(username, password);
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  .body2 {
     background-image: url(../assets/backgroundUsuarioView.jpg);
     background-size: cover;
-    background-repeat: repeat;
-}
-</style>
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  </style>  

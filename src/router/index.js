@@ -1,11 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UsuarioView from '../views/UsuarioView.vue'
+import IndexView from '../views/IndexView.vue'
 
 const routes = [
   {
     path: '/',
+    name: 'index',
+    component: IndexView
+  },
+  {
+    path: '/usuario',
     name: 'usuario',
-    component: UsuarioView
+    component: () => import('../views/UsuarioView.vue')
   },
   {
     path: '/gestao',
