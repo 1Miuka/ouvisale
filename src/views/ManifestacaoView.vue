@@ -135,13 +135,14 @@ export default {
                 doc.text(`Usuário: ${item.Usuario}`, 15, 50 + linha * 10);
                 doc.text(`Setor: ${item.Setor}`, 15, 60 + linha * 10);
                 doc.text(`Destinatário: ${item.Destinatário}`, 15, 70 + linha * 10);
-                doc.text(`Data: ${this.item.Data}`, 15, 80 + linha * 10);
+                doc.text(`Data: ${item.Data}`, 15, 80 + linha * 10);
                 linha += 7; // Aumenta o espaço entre os itens
             });
 
             // Salvando o documento
             doc.save('relatorio_manifestacoes.pdf');
         },
+
 
 
         gerarExcel() {
@@ -158,7 +159,7 @@ export default {
                 "Usuário": item.Usuario,
                 "Setor": item.Setor,
                 "Destinatário": item.Destinatário,
-                "Data": this.item.Data
+                "Data": item.Data // Corrigido para item.Data
             }));
 
             // Criando uma nova planilha do Excel
@@ -170,7 +171,8 @@ export default {
 
             // Salvando o arquivo Excel
             XLSX.writeFile(workbook, "manifestacoes.xlsx");
-        }
+        },
+
     }
 };
 </script>
